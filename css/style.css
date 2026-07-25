@@ -1,29 +1,30 @@
-/* ===========================================================
-   Hari ❤️ Jayalakshmi Wedding Invitation
-   Version 2.0
-=========================================================== */
-
-/* =========================
+/* ==========================================================
    RESET
-========================= */
+========================================================== */
 
-*{
+*,
+*::before,
+*::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#fffaf6;
+    background:#fffdf7;
 
-    color:#444;
+    color:#3d3d3d;
 
     overflow-x:hidden;
 
@@ -31,1106 +32,227 @@ body{
 
 }
 
-/* =========================
-   VARIABLES
-========================= */
+/* ==========================================================
+   ROOT VARIABLES
+========================================================== */
 
 :root{
 
-    --gold:#c8a14d;
+    --gold:#c8a248;
 
-    --gold-dark:#a57d2f;
+    --gold-dark:#b38c32;
 
-    --purple:#8b5fbf;
-
-    --pink:#fdf3f8;
+    --cream:#fffdf7;
 
     --white:#ffffff;
 
-    --shadow:0 15px 40px rgba(0,0,0,.15);
+    --text:#3d3d3d;
+
+    --light:#777;
+
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+
+    --radius:22px;
+
+    --transition:.35s ease;
 
 }
 
-/* =========================
-   COMMON
-========================= */
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ==========================================================
+   COMMON CONTAINER
+========================================================== */
 
 .container{
 
-    width:90%;
-
-    max-width:1200px;
+    width:min(1180px,92%);
 
     margin:auto;
 
 }
+
+/* ==========================================================
+   SECTION
+========================================================== */
 
 section{
 
-    padding:100px 0;
-
     position:relative;
 
+    padding:90px 20px;
+
 }
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
 
 .section-title{
 
-    font-family:'Cinzel',serif;
-
-    font-size:46px;
-
     text-align:center;
-
-    color:var(--gold-dark);
-
-    margin-bottom:20px;
-
-}
-
-.section-subtitle{
-
-    text-align:center;
-
-    color:#666;
-
-    max-width:700px;
-
-    margin:auto;
 
     margin-bottom:60px;
 
 }
 
-.small-divider{
+.section-divider{
 
-    width:180px;
+    width:120px;
 
-    display:block;
-
-    margin:0 auto 30px;
+    margin:0 auto 20px;
 
 }
 
-/* =========================
-   LOADER
-========================= */
+.section-title h2{
 
-#loader{
+    font-family:'Cinzel',serif;
 
-    position:fixed;
-
-    inset:0;
-
-    background:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:99999;
-
-    transition:1s;
-
-}
-
-.loader-hide{
-
-    opacity:0;
-
-    visibility:hidden;
-
-}
-
-.loader-content{
-
-    text-align:center;
-
-}
-
-.loader-content img{
-
-    width:220px;
-
-    margin-bottom:20px;
-
-}
-
-.loader-content h1{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:70px;
+    font-size:2.2rem;
 
     color:var(--gold);
 
-}
-
-.loader-content span{
-
-    color:#e6396c;
+    margin-bottom:15px;
 
 }
 
-.loader-content p{
+.section-title p{
 
-    margin-top:15px;
+    max-width:650px;
 
-    font-size:20px;
+    margin:auto;
 
-    letter-spacing:3px;
+    color:var(--light);
+
+    font-size:1rem;
 
 }
 
-/* =========================
-   MUSIC BUTTON
-========================= */
+/* ==========================================================
+   GOLD BUTTON
+========================================================== */
 
-#musicToggle{
+.gold-btn{
 
-    position:fixed;
+    display:inline-flex;
 
-    right:25px;
+    align-items:center;
 
-    bottom:25px;
+    justify-content:center;
 
-    width:65px;
+    gap:10px;
 
-    height:65px;
+    padding:14px 36px;
 
-    border:none;
-
-    border-radius:50%;
+    border-radius:50px;
 
     background:var(--gold);
 
     color:#fff;
 
-    font-size:24px;
+    font-weight:600;
 
-    cursor:pointer;
+    transition:var(--transition);
 
     box-shadow:var(--shadow);
 
-    z-index:999;
+}
 
-    transition:.35s;
+.gold-btn:hover{
+
+    background:var(--gold-dark);
+
+    transform:translateY(-3px);
 
 }
 
-#musicToggle:hover{
+.small-btn{
 
-    transform:scale(1.1);
+    padding:12px 24px;
 
-}
-
-#musicToggle.playing{
-
-    animation:pulse 1.5s infinite;
+    font-size:.95rem;
 
 }
 
-/* =========================
-   HERO
-========================= */
+/* ==========================================================
+   FLOATING FLOWERS
+========================================================== */
 
-#hero{
+.flower{
 
-    min-height:100vh;
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    overflow:hidden;
-
-}
-
-.hero-bg{
-
-    position:absolute;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    inset:0;
-
-}
-
-.overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(255,255,255,.55);
-
-    backdrop-filter:blur(3px);
-
-}
-
-.hero-content{
-
-    position:relative;
+    position:fixed;
 
     z-index:2;
 
-    text-align:center;
+    width:130px;
 
-    animation:fadeUp 1.4s;
+    pointer-events:none;
 
-}
-
-.hero-content .divider{
-
-    width:220px;
-
-    margin-bottom:20px;
+    opacity:.85;
 
 }
-
-.invite-text{
-
-    color:#555;
-
-    letter-spacing:2px;
-
-    font-size:18px;
-
-}
-
-.hero-content h2{
-
-    margin-top:20px;
-
-    font-size:34px;
-
-    color:#777;
-
-    font-weight:300;
-
-}
-
-.hero-content h1{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:92px;
-
-    color:var(--gold-dark);
-
-    margin:25px 0;
-
-}
-
-.hero-content h1 span{
-
-    color:#e64a73;
-
-}
-
-.date{
-
-    font-size:22px;
-
-    color:#555;
-
-    margin-bottom:35px;
-
-}
-
-/* =========================
-   HERO IMAGE
-========================= */
-
-.hero-image{
-
-    margin:35px auto;
-
-}
-
-.hero-image img{
-
-    width:420px;
-
-    max-width:90%;
-
-    border-radius:30px;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.25);
-
-    transition:.5s;
-
-}
-
-.hero-image img:hover{
-
-    transform:scale(1.04);
-
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-#openInvite{
-
-    padding:18px 42px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:linear-gradient(45deg,var(--gold),#e0b862);
-
-    color:#fff;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-    box-shadow:var(--shadow);
-
-}
-
-#openInvite:hover{
-
-    transform:translateY(-4px);
-
-}
-
-/* =========================
-   FLOWERS
-========================= */
 
 .flower-left{
 
-    position:absolute;
+    top:0;
 
     left:0;
-
-    bottom:0;
-
-    width:260px;
-
-    opacity:.95;
 
 }
 
 .flower-right{
 
-    position:absolute;
+    top:0;
 
     right:0;
 
-    top:0;
-
-    width:260px;
-
-    opacity:.95;
-
 }
 
-/* =========================
-   MESSAGE
-========================= */
-
-#message{
-
-    background:#fff;
-
-}
-
-#message p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-    font-size:20px;
-
-    color:#555;
-
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes pulse{
-
-    0%{
-
-        transform:scale(1);
-
-    }
-
-    50%{
-
-        transform:scale(1.1);
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-    }
-
-}
-
-/* Fade utility */
-
-.fade-up{
-
-    animation:fadeUp .9s ease forwards;
-
-}
-/* ===========================================================
-   STORY SECTION
-=========================================================== */
-
-#story{
-
-    background:linear-gradient(to bottom,#fffaf6,#fff);
-
-}
-
-.illustration-wrapper{
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-top:40px;
-
-}
-
-.illustration-wrapper img{
-
-    width:420px;
-
-    max-width:90%;
-
-    animation:floatImage 5s ease-in-out infinite;
-
-    filter:drop-shadow(0 20px 35px rgba(0,0,0,.15));
-
-}
-
-/* ===========================================================
-   SCRATCH CARD
-=========================================================== */
-
-#scratchSection{
-
-    background:#fffdf9;
-
-}
-
-#scratchContainer{
-
-    position:relative;
-
-    width:100%;
-
-    max-width:750px;
-
-    height:700px;
-
-    margin:auto;
-
-    border-radius:30px;
-
-    overflow:hidden;
-
-    background:#ffffff;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.18);
-
-}
-
-#scratchCanvas{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    z-index:20;
-
-    cursor:pointer;
-
-}
-
-#scratchContent{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:40px;
-
-    text-align:center;
-
-    background:#fff;
-
-}
-
-#scratchContent{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    width:100%;
-    height:100%;
-
-    overflow:hidden;
-
-}
-
-#scratchContent img{
-
-    width:100%;
-
-    max-width:420px;
-
-    max-height:500px;
-
-    object-fit:contain;
-
-    border-radius:25px;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
-
-    margin-bottom:30px;
-
-}
-
-#scratchContent h2{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:64px;
-
-    color:var(--gold-dark);
-
-    margin-bottom:15px;
-
-}
-
-#scratchContent p{
-
-    font-size:20px;
-
-    color:#555;
-
-    max-width:600px;
-
-}
-
-/* ===========================================================
-   PHOTO GALLERY
-=========================================================== */
-
-#gallery{
-
-    background:#fffaf8;
-
-}
-
-.gallery-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    max-width:1000px;
-
-    margin:auto;
-
-}
-
-.gallery-item{
-
-    overflow:hidden;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
-
-    background:#fff;
-
-}
-
-.gallery-item img{
-
-    width:100%;
-
-    height:420px;
-
-    object-fit:cover;
-
-    transition:.6s;
-
-}
-
-.gallery-item:hover img{
-
-    transform:scale(1.08);
-
-}
-
-/* Last image spans full width */
-
-.gallery-item:nth-child(4){
-
-    grid-column:1 / span 2;
-
-}
-
-.gallery-item:nth-child(4) img{
-
-    height:500px;
-
-}
-
-/* ===========================================================
-   BRIDE & GROOM
-=========================================================== */
-
-#couple{
-
-    background:#ffffff;
-
-}
-
-.couple-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 300px 1fr;
-
-    gap:40px;
-
-    align-items:center;
-
-}
-
-.person-card{
-
-    background:#fff;
-
-    border-radius:30px;
-
-    padding:30px;
-
-    text-align:center;
-
-    box-shadow:0 20px 55px rgba(0,0,0,.12);
-
-    transition:.4s;
-
-}
-
-.person-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.person-card img{
-
-    width:260px;
-
-    height:340px;
-
-    object-fit:cover;
-
-    border-radius:25px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-}
-
-.person-card h2{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:48px;
-
-    color:var(--gold-dark);
-
-}
-
-.person-card h4{
-
-    margin:12px 0;
-
-    color:var(--purple);
-
-    font-size:20px;
-
-    letter-spacing:1px;
-
-}
-
-.person-card p{
-
-    color:#555;
-
-    line-height:2;
-
-}
-
-.illustration{
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.illustration img{
-
-    width:250px;
-
-    animation:floatImage 6s ease-in-out infinite;
-
-}
-
-/* ===========================================================
-   COMMON CARD
-=========================================================== */
-
-.event-card,
-.thankyou-card{
-
-    background:#fff;
-
-    border-radius:30px;
-
-    padding:40px;
-
-    box-shadow:0 20px 55px rgba(0,0,0,.12);
-
-}
-
-/* ===========================================================
-   FLOATING ANIMATION
-=========================================================== */
-
-@keyframes floatImage{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-15px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-/* ===========================================================
-   RECEPTION & WEDDING
-=========================================================== */
-
-#reception,
-#wedding{
-
-    background:#fffdf9;
-
-}
-
-.event-card{
-
-    max-width:700px;
-
-    margin:auto;
-
-    text-align:center;
-
-    transition:.4s;
-
-}
-
-.event-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.event-card h3{
-
-    font-family:'Cinzel',serif;
-
-    color:var(--gold-dark);
-
-    font-size:38px;
-
-    margin-bottom:15px;
-
-}
-
-.event-card h4{
-
-    color:var(--purple);
-
-    font-size:24px;
-
-    margin-bottom:20px;
-
-}
-
-.event-card p{
-
-    color:#555;
-
-    margin-bottom:15px;
-
-    font-size:18px;
-
-}
-
-.map-btn{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:15px 35px;
-
-    background:linear-gradient(45deg,var(--gold),#d7b061);
-
-    color:#fff;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    transition:.4s;
-
-    font-weight:600;
-
-}
-
-.map-btn:hover{
-
-    transform:translateY(-4px);
-
-}
-
-/* ===========================================================
-   COUNTDOWN
-=========================================================== */
-
-#countdown{
-
-    background:#fff8f2;
-
-}
-
-.countdown-wrapper{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:30px;
-
-}
-
-.time-box{
-
-    width:170px;
-
-    height:170px;
-
-    border-radius:25px;
-
-    background:white;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
-
-}
-
-.time-box span{
-
-    font-size:60px;
-
-    color:var(--gold-dark);
-
-    font-family:'Cinzel',serif;
-
-}
-
-.time-box small{
-
-    font-size:20px;
-
-    color:#666;
-
-}
-
-/* ===========================================================
-   THANK YOU
-=========================================================== */
-
-#thankyou{
-
-    background:white;
-
-}
-
-.thankyou-card{
-
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.thankyou-card h2{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:72px;
-
-    color:var(--gold-dark);
-
-    margin-bottom:20px;
-
-}
-
-.thankyou-card p{
-
-    font-size:22px;
-
-    color:#555;
-
-    margin-bottom:30px;
-
-}
-
-.thankyou-card h3{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:56px;
-
-    color:#d64874;
-
-}
-
-.heart-animation{
-
-    font-size:60px;
-
-    margin-top:20px;
-
-    animation:heartbeat 1.5s infinite;
-
-}
-
-/* ===========================================================
-   FOOTER
-=========================================================== */
-
-footer{
-
-    padding:50px 20px;
-
-    background:#c8a14d;
-
-    color:white;
-
-    text-align:center;
-
-}
-
-footer p{
-
-    margin:10px 0;
-
-    font-size:18px;
-
-}
-
-/* ===========================================================
+/* ==========================================================
    PETALS
-=========================================================== */
+========================================================== */
 
-.petals{
+#petalContainer{
 
     position:fixed;
 
@@ -1144,657 +266,200 @@ footer p{
 
 }
 
-.petals span{
+#petalContainer span{
 
     position:absolute;
 
-    width:22px;
+    top:-80px;
 
-    height:22px;
+    width:18px;
+
+    height:18px;
 
     background:rgba(255,182,193,.8);
 
-    border-radius:50% 0;
+    border-radius:50%;
 
-    animation:petalFall linear infinite;
+    animation:petals linear infinite;
 
 }
 
-.petals span:nth-child(1){left:5%;animation-duration:12s;}
-.petals span:nth-child(2){left:15%;animation-duration:14s;}
-.petals span:nth-child(3){left:28%;animation-duration:16s;}
-.petals span:nth-child(4){left:40%;animation-duration:13s;}
-.petals span:nth-child(5){left:52%;animation-duration:15s;}
-.petals span:nth-child(6){left:65%;animation-duration:12s;}
-.petals span:nth-child(7){left:76%;animation-duration:17s;}
-.petals span:nth-child(8){left:84%;animation-duration:13s;}
-.petals span:nth-child(9){left:92%;animation-duration:16s;}
-.petals span:nth-child(10){left:98%;animation-duration:15s;}
+#petalContainer span:nth-child(1){
 
-@keyframes petalFall{
+    left:5%;
+    animation-duration:12s;
+
+}
+
+#petalContainer span:nth-child(2){
+
+    left:18%;
+    animation-duration:16s;
+
+}
+
+#petalContainer span:nth-child(3){
+
+    left:32%;
+    animation-duration:14s;
+
+}
+
+#petalContainer span:nth-child(4){
+
+    left:48%;
+    animation-duration:18s;
+
+}
+
+#petalContainer span:nth-child(5){
+
+    left:63%;
+    animation-duration:15s;
+
+}
+
+#petalContainer span:nth-child(6){
+
+    left:76%;
+    animation-duration:19s;
+
+}
+
+#petalContainer span:nth-child(7){
+
+    left:88%;
+    animation-duration:13s;
+
+}
+
+#petalContainer span:nth-child(8){
+
+    left:96%;
+    animation-duration:17s;
+
+}
+
+@keyframes petals{
 
     from{
 
-        transform:translateY(-150px) rotate(0deg);
+        transform:translateY(-50px) rotate(0deg);
 
     }
 
     to{
 
-        transform:translateY(120vh) rotate(720deg);
+        transform:translateY(110vh) rotate(360deg);
 
     }
 
 }
-
-@keyframes heartbeat{
-
-    0%{transform:scale(1);}
-    25%{transform:scale(1.15);}
-    50%{transform:scale(1);}
-    75%{transform:scale(1.12);}
-    100%{transform:scale(1);}
-
-}
-
-/* ===========================================================
-   SCROLL BAR
-=========================================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--gold);
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f5f5f5;
-
-}
-
-/* ===========================================================
-   MOBILE
-=========================================================== */
-
-@media(max-width:992px){
-
-.hero-content h1{
-
-font-size:70px;
-
-}
-
-.section-title{
-
-font-size:38px;
-
-}
-
-.couple-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-item:nth-child(4){
-
-grid-column:auto;
-
-}
-
-.gallery-item img{
-
-height:350px;
-
-}
-
-#scratchContainer{
-
-height:450px;
-
-}
-
-.time-box{
-
-width:140px;
-
-height:140px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-
-font-size:58px;
-
-}
-
-.hero-content h2{
-
-font-size:26px;
-
-}
-
-.hero-image img{
-
-width:300px;
-
-}
-
-.person-card img{
-
-width:220px;
-
-height:300px;
-
-}
-
-#scratchContent img{
-
-width:220px;
-
-}
-
-#scratchContent h2{
-
-font-size:46px;
-
-}
-
-.time-box{
-
-width:120px;
-
-height:120px;
-
-}
-
-.time-box span{
-
-font-size:42px;
-
-}
-
-.thankyou-card h2{
-
-font-size:54px;
-
-}
-
-.thankyou-card h3{
-
-font-size:42px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.section-title{
-
-font-size:30px;
-
-}
-
-.hero-content h1{
-
-font-size:48px;
-
-}
-
-.hero-content .divider{
-
-width:150px;
-
-}
-
-#openInvite{
-
-padding:15px 28px;
-
-}
-
-.gallery-item img{
-
-height:260px;
-
-}
-
-}
-/* ===========================================================
-   LIGHTBOX
-=========================================================== */
-
-#lightbox{
+/* ==========================================================
+   PAGE LOADER
+========================================================== */
+
+#loader{
 
     position:fixed;
 
     inset:0;
 
-    background:rgba(0,0,0,.92);
+    background:var(--cream);
 
-    display:none;
+    display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    z-index:999999;
+    z-index:99999;
 
-    animation:fadeIn .4s;
-
-}
-
-#lightbox img{
-
-    max-width:90%;
-
-    max-height:90%;
-
-    border-radius:20px;
-
-    box-shadow:0 30px 80px rgba(255,255,255,.15);
-
-    animation:zoomIn .4s;
+    transition:.8s ease;
 
 }
 
-#closeLightbox{
-
-    position:absolute;
-
-    top:25px;
-
-    right:35px;
-
-    font-size:55px;
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-#closeLightbox:hover{
-
-    transform:rotate(90deg);
-
-    color:#FFD700;
-
-}
-
-/* ===========================================================
-   SCROLL TO TOP BUTTON
-=========================================================== */
-
-#scrollTop{
-
-    position:fixed;
-
-    bottom:100px;
-
-    right:30px;
-
-    width:60px;
-
-    height:60px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:linear-gradient(45deg,#c8a14d,#e7c777);
-
-    color:white;
-
-    font-size:28px;
-
-    cursor:pointer;
+#loader.hidden{
 
     opacity:0;
 
-    transition:.4s;
-
-    z-index:999;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    visibility:hidden;
 
 }
 
-#scrollTop:hover{
+.loader-box{
 
-    transform:translateY(-6px);
+    text-align:center;
 
-}
+    max-width:420px;
 
-/* ===========================================================
-   RIPPLE EFFECT
-=========================================================== */
-
-button,
-.map-btn{
-
-    position:relative;
-
-    overflow:hidden;
+    padding:40px;
 
 }
 
-.ripple{
+.loader-divider{
 
-    position:absolute;
+    width:120px;
 
-    width:15px;
+    margin:20px auto;
 
-    height:15px;
+}
 
-    background:rgba(255,255,255,.6);
+.loader-box h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    line-height:1.3;
+
+}
+
+.loader-box h2 span{
+
+    color:#d94b63;
+
+    margin:0 12px;
+
+}
+
+.loader-box p{
+
+    margin-top:20px;
+
+    color:var(--light);
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================================
+   LOADER RING
+========================================================== */
+
+.loader-ring{
+
+    width:75px;
+
+    height:75px;
+
+    margin:0 auto;
 
     border-radius:50%;
 
-    transform:translate(-50%,-50%);
+    border:6px solid #efe7d0;
 
-    animation:rippleAnim .7s linear;
+    border-top:6px solid var(--gold);
 
-}
-
-/* ===========================================================
-   SPARKLES
-=========================================================== */
-
-#sparkleContainer{
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:9999;
+    animation:loaderSpin 1s linear infinite;
 
 }
 
-.sparkle{
-
-    position:fixed;
-
-    font-size:18px;
-
-    animation:sparkleMove 1.2s linear forwards;
-
-    pointer-events:none;
-
-}
-
-/* ===========================================================
-   GALLERY HOVER
-=========================================================== */
-
-.gallery-item{
-
-    position:relative;
-
-}
-
-.gallery-item::after{
-
-    content:"❤";
-
-    position:absolute;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%) scale(0);
-
-    font-size:55px;
-
-    color:white;
-
-    transition:.4s;
-
-}
-
-.gallery-item:hover::after{
-
-    transform:translate(-50%,-50%) scale(1);
-
-}
-
-.gallery-item:hover{
-
-    box-shadow:0 30px 70px rgba(200,161,77,.35);
-
-}
-
-/* ===========================================================
-   GLASS EFFECT
-=========================================================== */
-
-.person-card,
-.event-card,
-.thankyou-card{
-
-    background:rgba(255,255,255,.82);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.45);
-
-}
-
-/* ===========================================================
-   HERO TITLE
-=========================================================== */
-
-.hero-content h1{
-
-    text-shadow:
-
-    0 4px 12px rgba(0,0,0,.15),
-
-    0 0 20px rgba(200,161,77,.25);
-
-}
-
-.hero-content h2{
-
-    text-shadow:0 2px 6px rgba(255,255,255,.8);
-
-}
-
-/* ===========================================================
-   IMAGE SHADOWS
-=========================================================== */
-
-.hero-image img,
-.person-card img,
-.gallery-item img,
-#scratchContent img,
-.illustration img{
-
-    box-shadow:
-
-    0 20px 60px rgba(0,0,0,.18);
-
-}
-
-/* ===========================================================
-   BUTTON GLOW
-=========================================================== */
-
-button:hover,
-.map-btn:hover{
-
-    box-shadow:
-
-    0 0 35px rgba(200,161,77,.5);
-
-}
-
-/* ===========================================================
-   ANIMATIONS
-=========================================================== */
-
-@keyframes rippleAnim{
-
-    from{
-
-        opacity:.7;
-
-        transform:translate(-50%,-50%) scale(0);
-
-    }
-
-    to{
-
-        opacity:0;
-
-        transform:translate(-50%,-50%) scale(18);
-
-    }
-
-}
-
-@keyframes sparkleMove{
-
-    from{
-
-        opacity:1;
-
-        transform:
-
-        translateY(0)
-
-        scale(.4)
-
-        rotate(0deg);
-
-    }
-
-    to{
-
-        opacity:0;
-
-        transform:
-
-        translateY(-60px)
-
-        scale(1.8)
-
-        rotate(360deg);
-
-    }
-
-}
-
-@keyframes zoomIn{
-
-    from{
-
-        transform:scale(.7);
-
-        opacity:0;
-
-    }
-
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
-
-    }
-
-}
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
-
-}
-
-/* ===========================================================
-   SECTION DIVIDER ANIMATION
-=========================================================== */
-
-.small-divider{
-
-    animation:dividerFloat 5s ease-in-out infinite;
-
-}
-
-@keyframes dividerFloat{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-8px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ===========================================================
-   MUSIC BUTTON ROTATION
-=========================================================== */
-
-#musicToggle.playing{
-
-    animation:musicSpin 4s linear infinite;
-
-}
-
-@keyframes musicSpin{
-
-    from{
-
-        transform:rotate(0deg);
-
-    }
+@keyframes loaderSpin{
 
     to{
 
@@ -1804,117 +469,1693 @@ button:hover,
 
 }
 
-/* ===========================================================
-   GOLD GRADIENT TEXT
-=========================================================== */
+/* ==========================================================
+   WELCOME SCREEN
+========================================================== */
 
-.section-title,
-.event-card h3{
+#welcomeScreen{
 
-    background:linear-gradient(
+    position:fixed;
 
-    45deg,
+    inset:0;
 
-    #b8860b,
+    background:rgba(255,253,247,.98);
 
-    #e7c777,
+    backdrop-filter:blur(8px);
 
-    #b8860b
+    display:flex;
 
-    );
+    justify-content:center;
 
-    -webkit-background-clip:text;
+    align-items:center;
 
-    -webkit-text-fill-color:transparent;
+    z-index:9990;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.7s ease;
+
+}
+
+#welcomeScreen.show{
+
+    opacity:1;
+
+    visibility:visible;
 
 }
 
-/* ===========================================================
-   FINAL RESPONSIVE IMPROVEMENTS
-=========================================================== */
+#welcomeScreen.hide{
 
-@media(max-width:768px){
+    opacity:0;
 
-#lightbox img{
-
-width:95%;
+    visibility:hidden;
 
 }
+
+/* ==========================================================
+   WELCOME CARD
+========================================================== */
+
+.welcome-card{
+
+    width:min(520px,92%);
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:55px 35px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    animation:welcomeUp .9s ease;
+
+}
+
+@keyframes welcomeUp{
+
+    from{
+
+        transform:translateY(40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+.welcome-card img{
+
+    width:130px;
+
+    margin:0 auto 25px;
+
+}
+
+.welcome-card h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    color:var(--light);
+
+    margin-bottom:25px;
+
+}
+
+.welcome-card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    color:var(--gold);
+
+    line-height:1.25;
+
+    margin-bottom:20px;
+
+}
+
+.welcome-card h1 span{
+
+    color:#d94b63;
+
+    margin:0 12px;
+
+}
+
+.welcome-card p{
+
+    max-width:360px;
+
+    margin:0 auto 35px;
+
+    color:var(--light);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   MUSIC BUTTON
+========================================================== */
+
+#musicToggle{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+#musicToggle:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
 
 #scrollTop{
 
-width:50px;
+    position:fixed;
 
-height:50px;
+    right:25px;
 
-font-size:22px;
+    bottom:105px;
 
-right:15px;
+    width:52px;
 
-bottom:85px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:var(--gold);
+
+    border:2px solid var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.1rem;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
 
 }
 
-.hero-content h1{
+#scrollTop.show{
 
-font-size:52px;
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#scrollTop:hover{
+
+    background:var(--gold);
+
+    color:#fff;
+
+}
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:url("../images/floral-bg.png") center center/cover no-repeat;
+
+    overflow:hidden;
+
+    padding:120px 20px 80px;
 
 }
 
-.gallery-item::after{
+.hero-overlay{
 
-font-size:38px;
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,253,247,.72);
 
 }
+
+.hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+}
+
+.hero-divider{
+
+    width:140px;
+
+    margin:0 auto 25px;
+
+}
+
+.hero-tagline{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
+
+}
+
+.hero-title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:5rem;
+
+    color:var(--gold);
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-title .heart{
+
+    color:#d94b63;
+
+    margin:0 18px;
+
+    font-size:.9em;
+
+}
+
+.hero-subtitle{
+
+    max-width:650px;
+
+    margin:0 auto 35px;
+
+    color:var(--light);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   DATE CARD
+========================================================== */
+
+.date-card{
+
+    width:220px;
+
+    margin:35px auto;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.date-month{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.date-day{
+
+    font-family:'Cinzel',serif;
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    color:#333;
+
+    line-height:1;
+
+    margin:12px 0;
+
+}
+
+.date-year{
+
+    color:var(--gold);
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.date-weekday{
+
+    color:var(--light);
+
+}
+
+/* ==========================================================
+   COUNTDOWN
+========================================================== */
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin:40px auto;
+
+}
+
+.count-item{
+
+    width:95px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:18px 12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.count-item span{
+
+    display:block;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+
+}
+
+.count-item small{
+
+    color:var(--light);
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    font-size:.8rem;
+
+}
+
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.hero-image-section{
+
+    background:var(--cream);
+
+    padding:80px 20px;
+
+}
+
+.hero-image-wrapper{
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:700px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    border-radius:28px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+.scroll-indicator{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+}
+
+.scroll-indicator span{
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+}
+
+.scroll-mouse{
+
+    width:32px;
+
+    height:54px;
+
+    border:2px solid var(--gold);
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.scroll-wheel{
+
+    width:6px;
+
+    height:10px;
+
+    border-radius:10px;
+
+    background:var(--gold);
+
+    margin-top:8px;
+
+    animation:scrollWheel 1.5s infinite;
+
+}
+
+@keyframes scrollWheel{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(20px);
+
+        opacity:0;
+
+    }
+
+}
+/* ==========================================================
+   BRIDE & GROOM SECTION
+========================================================== */
+
+.couple-section{
+
+    background:#fff;
+
+    position:relative;
+
+}
+
+.couple-container{
+
+    width:min(1200px,95%);
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+    align-items:stretch;
+
+}
+
+/* ==========================================================
+   PERSON CARD
+========================================================== */
 
 .person-card{
 
-padding:20px;
+    background:#ffffff;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.10);
+
+    transition:.35s ease;
 
 }
+
+.person-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.person-image{
+
+    background:#faf7f2;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   PERSON IMAGE
+========================================================== */
+
+.person-image img{
+
+    width:100%;
+
+    max-width:320px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+
+    border-radius:25px;
+
+}
+
+/* ==========================================================
+   PERSON CONTENT
+========================================================== */
+
+.person-content{
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.person-label{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#f8f0dc;
+
+    color:var(--gold);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.person-content h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+}
+
+.gold-line{
+
+    width:80px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    margin:20px auto;
+
+    border-radius:10px;
+
+}
+
+.person-content p{
+
+    color:var(--light);
+
+    margin-bottom:10px;
+
+    line-height:1.8;
+
+}
+
+.person-content h4{
+
+    font-family:'Cinzel',serif;
+
+    font-size:1.05rem;
+
+    color:#444;
+
+    margin:6px 0;
+
+}
+
+/* ==========================================================
+   CARD ANIMATION
+========================================================== */
+
+.person-card{
+
+    animation:cardFade .8s ease both;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   WEDDING EVENTS
+========================================================== */
+
+.events-section{
+
+    background:#fcfaf5;
+
+    position:relative;
+
+}
+
+.events-container{
+
+    width:min(1200px,95%);
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+/* ==========================================================
+   EVENT CARD
+========================================================== */
 
 .event-card{
 
-padding:25px;
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.10);
+
+    transition:.35s ease;
 
 }
 
-}
+.event-card:hover{
 
-@media(max-width:480px){
-
-.section-title{
-
-font-size:28px;
+    transform:translateY(-8px);
 
 }
 
-.hero-content h1{
+/* ==========================================================
+   EVENT ICON
+========================================================== */
 
-font-size:42px;
+.event-icon{
+
+    width:100px;
+
+    height:100px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#f8f0dc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+.event-icon img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+    display:block;
 
 }
 
-.hero-content h2{
+/* ==========================================================
+   EVENT TITLE
+========================================================== */
 
-font-size:22px;
+.event-card h3{
 
-}
+    font-family:'Cinzel',serif;
 
-.hero-image img{
+    font-size:1.7rem;
 
-width:260px;
+    color:var(--gold);
 
-}
-
-.small-divider{
-
-width:120px;
+    margin-bottom:18px;
 
 }
 
+.event-date{
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:10px;
+
 }
 
-/* ===========================================================
-   END OF STYLE.CSS
-=========================================================== */
+.event-card p{
+
+    color:var(--light);
+
+    margin-bottom:8px;
+
+    line-height:1.8;
+
+}
+
+.event-card h4{
+
+    margin:22px 0 12px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:1.1rem;
+
+    color:#444;
+
+}
+
+/* ==========================================================
+   MAP BUTTON
+========================================================== */
+
+.event-card .gold-btn{
+
+    margin-top:25px;
+
+}
+
+/* ==========================================================
+   EVENT CARD ENTRY ANIMATION
+========================================================== */
+
+.event-card{
+
+    animation:eventFade .8s ease both;
+
+}
+
+@keyframes eventFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   SCRATCH SECTION
+========================================================== */
+
+.scratch-section{
+
+    background:#fffdf7;
+
+    position:relative;
+
+}
+
+.scratch-wrapper{
+
+    width:min(900px,95%);
+
+    margin:50px auto 0;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   SCRATCH CONTENT
+========================================================== */
+
+#scratchContent{
+
+    width:100%;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   SCRATCH IMAGE
+========================================================== */
+
+#scratchContent img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:500px;
+
+    height:auto;
+
+    margin:0 auto 30px;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+   SCRATCH TEXT
+========================================================== */
+
+#scratchContent h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2.8rem;
+
+    color:var(--gold);
+
+    line-height:1.4;
+
+}
+
+/* ==========================================================
+   SCRATCH CANVAS
+========================================================== */
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+/* ==========================================================
+   SCRATCH WRAPPER SHADOW
+========================================================== */
+
+.scratch-wrapper{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   SCRATCH FADE ANIMATION
+========================================================== */
+
+.scratch-wrapper{
+
+    animation:scratchFade .8s ease both;
+
+}
+
+@keyframes scratchFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   PHOTO GALLERY
+========================================================== */
+
+.gallery-section{
+
+    background:#fcfaf5;
+
+    position:relative;
+
+}
+
+.gallery-slider{
+
+    width:min(1100px,95%);
+
+    margin:60px auto 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   SLIDER WINDOW
+========================================================== */
+
+.slider-window{
+
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+}
+
+/* ==========================================================
+   TRACK
+========================================================== */
+
+.slider-track{
+
+    display:flex;
+
+    transition:transform .55s ease;
+
+}
+
+/* ==========================================================
+   SLIDE
+========================================================== */
+
+.slide{
+
+    min-width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* ==========================================================
+   COUPLE IMAGE
+========================================================== */
+
+.slide img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:650px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+   NAVIGATION BUTTONS
+========================================================== */
+
+.slider-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.slider-btn:hover{
+
+    background:var(--gold-dark);
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   DOTS
+========================================================== */
+
+.slider-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:35px;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#d7d7d7;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.dot.active{
+
+    width:28px;
+
+    border-radius:20px;
+
+    background:var(--gold);
+
+}
+
+/* ==========================================================
+   GALLERY ANIMATION
+========================================================== */
+
+.gallery-slider{
+
+    animation:galleryFade .8s ease both;
+
+}
+
+@keyframes galleryFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   DISNEY ILLUSTRATION
+========================================================== */
+
+.illustration-section{
+
+    background:#fffdf7;
+
+    padding:90px 20px;
+
+}
+
+.illustration-card{
+
+    width:min(900px,95%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.illustration-card img{
+
+    width:100%;
+
+    max-width:650px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   THANK YOU
+========================================================== */
+
+.thankyou-section{
+
+    background:#fcfaf5;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+.thankyou-section .section-divider{
+
+    width:120px;
+
+    margin:0 auto 25px;
+
+}
+
+.thankyou-section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:2.4rem;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.thankyou-section p{
+
+    max-width:700px;
+
+    margin:0 auto 18px;
+
+    color:var(--light);
+
+    line-height:1.9;
+
+}
+
+.thankyou-section h3{
+
+    margin-top:35px;
+
+    color:var(--gold);
+
+    font-family:'Cinzel',serif;
+
+    font-size:1.2rem;
+
+}
+
+.thankyou-section h1{
+
+    margin-top:18px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    color:var(--gold);
+
+}
+
+.thankyou-section h1 span{
+
+    color:#d94b63;
+
+    margin:0 15px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#2d2d2d;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+    opacity:.9;
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:992px){
+
+    .hero-title{
+
+        font-size:4rem;
+
+    }
+
+    .couple-container{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .events-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    section{
+
+        padding:70px 18px;
+
+    }
+
+    .hero{
+
+        padding-top:100px;
+
+    }
+
+    .hero-title{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .date-card{
+
+        width:180px;
+
+    }
+
+    .date-day{
+
+        font-size:3rem;
+
+    }
+
+    .countdown{
+
+        gap:12px;
+
+    }
+
+    .count-item{
+
+        width:80px;
+
+        padding:14px 8px;
+
+    }
+
+    .count-item span{
+
+        font-size:1.5rem;
+
+    }
+
+    .person-image{
+
+        padding:25px;
+
+    }
+
+    .person-image img{
+
+        max-width:260px;
+
+    }
+
+    #scratchContent{
+
+        padding:25px;
+
+    }
+
+    #scratchContent img{
+
+        max-width:100%;
+
+    }
+
+    .gallery-slider{
+
+        gap:10px;
+
+    }
+
+    .slider-btn{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:1.1rem;
+
+    }
+
+    .slide img{
+
+        max-width:100%;
+
+    }
+
+    .illustration-card img{
+
+        max-width:100%;
+
+    }
+
+    .thankyou-section h1{
+
+        font-size:3rem;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+    .hero-title{
+
+        font-size:2.7rem;
+
+    }
+
+    .welcome-card{
+
+        padding:35px 22px;
+
+    }
+
+    .welcome-card h1{
+
+        font-size:3rem;
+
+    }
+
+    .section-title h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .person-content{
+
+        padding:25px;
+
+    }
+
+    .person-content h3{
+
+        font-size:2.5rem;
+
+    }
+
+    .event-card{
+
+        padding:30px 22px;
+
+    }
+
+    .thankyou-section h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .flower{
+
+        width:80px;
+
+    }
+
+}

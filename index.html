@@ -3,18 +3,39 @@
 
 <head>
 
+    <!-- ==========================================
+         META
+    =========================================== -->
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Hari ❤️ Jayalakshmi | Wedding Invitation</title>
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="description"
+          content="Wedding Invitation of Hariharan & Jayalakshmi">
+
+    <meta name="theme-color"
+          content="#D4AF37">
+
+    <title>
+        Hariharan ❤️ Jayalakshmi | Wedding Invitation
+    </title>
+
+    <!-- ==========================================
+         FAVICON
+    =========================================== -->
 
     <link rel="icon"
-          href="images/favicon.png">
+          href="images/favicon.png"
+          type="image/png">
 
-    <!-- Google Fonts -->
+    <!-- ==========================================
+         GOOGLE FONTS
+    =========================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -23,15 +44,12 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
 
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- Main CSS -->
+    <!-- ==========================================
+         STYLE SHEET
+    =========================================== -->
 
     <link rel="stylesheet"
           href="css/style.css">
@@ -40,30 +58,33 @@
 
 <body>
 
-<!-- ===================================================== -->
-<!-- LOADER -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     PAGE LOADER
+========================================== -->
 
 <div id="loader">
 
-    <div class="loader-content">
+    <div class="loader-box">
 
-        <img src="images/floral/divider.png"
-             alt="divider">
+        <div class="loader-ring"></div>
 
-        <h1>
+        <img src="images/divider.png"
+             alt="Divider"
+             class="loader-divider">
+
+        <h2>
 
             Hariharan
 
-            <span>&</span>
+            <span>❤</span>
 
             Jayalakshmi
 
-        </h1>
+        </h2>
 
         <p>
 
-            Wedding Invitation
+            Preparing Our Wedding Invitation...
 
         </p>
 
@@ -71,12 +92,314 @@
 
 </div>
 
-<!-- ===================================================== -->
-<!-- MUSIC -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     WELCOME SCREEN
+========================================== -->
 
-<audio id="bgMusic"
-       loop>
+<section id="welcomeScreen">
+
+    <div class="welcome-card">
+
+        <img src="images/divider.png"
+             alt="Divider">
+
+        <h3>
+
+            Two Hearts,
+            One Promise,
+            A Lifetime Of Love Begins Here
+
+        </h3>
+
+        <h1>
+
+            Hariharan
+
+            <span>❤</span>
+
+            Jayalakshmi
+
+        </h1>
+
+        <p>
+
+            Together with our families,
+            we invite you to celebrate
+            our wedding.
+
+        </p>
+
+        <button
+            id="enterInvitation"
+            class="gold-btn">
+
+            Open Invitation
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     MUSIC BUTTON
+========================================== -->
+
+<button
+    id="musicToggle"
+    aria-label="Music">
+
+    🎵
+
+</button>
+
+<!-- ==========================================
+     SCROLL TO TOP
+========================================== -->
+
+<button
+    id="scrollTop"
+    aria-label="Scroll to Top">
+
+    ↑
+
+</button>
+
+<!-- ==========================================
+     DECORATIVE FLOWERS
+========================================== -->
+
+<img src="images/flower1.png"
+     class="flower flower-left"
+     alt="Flower Left">
+
+<img src="images/flower2.png"
+     class="flower flower-right"
+     alt="Flower Right">
+
+<!-- ==========================================
+     FLOATING PETALS
+========================================== -->
+
+<div id="petalContainer">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- ==========================================
+     HERO SECTION STARTS BELOW
+========================================== -->
+<!-- ==========================================
+     HERO SECTION
+========================================== -->
+
+<header id="hero" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+
+        <img
+            src="images/divider.png"
+            alt="Divider"
+            class="hero-divider">
+
+        <p class="hero-tagline">
+
+            Together with our Families
+
+        </p>
+
+        <h1 class="hero-title">
+
+            Hariharan
+
+            <span class="heart">
+
+                ❤
+
+            </span>
+
+            Jayalakshmi
+
+        </h1>
+
+        <p class="hero-subtitle">
+
+            Request the honour of your gracious presence
+            at the celebration of our wedding.
+
+        </p>
+
+        <!-- Wedding Date -->
+
+        <div class="date-card">
+
+            <div class="date-month">
+
+                AUGUST
+
+            </div>
+
+            <div class="date-day">
+
+                23
+
+            </div>
+
+            <div class="date-year">
+
+                2026
+
+            </div>
+
+            <div class="date-weekday">
+
+                Sunday
+
+            </div>
+
+        </div>
+
+        <!-- Countdown -->
+
+        <div id="countdown"
+             class="countdown">
+
+            <div class="count-item">
+
+                <span id="days">
+
+                    00
+
+                </span>
+
+                <small>
+
+                    Days
+
+                </small>
+
+            </div>
+
+            <div class="count-item">
+
+                <span id="hours">
+
+                    00
+
+                </span>
+
+                <small>
+
+                    Hours
+
+                </small>
+
+            </div>
+
+            <div class="count-item">
+
+                <span id="minutes">
+
+                    00
+
+                </span>
+
+                <small>
+
+                    Minutes
+
+                </small>
+
+            </div>
+
+            <div class="count-item">
+
+                <span id="seconds">
+
+                    00
+
+                </span>
+
+                <small>
+
+                    Seconds
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Open Invitation -->
+
+        <button
+            id="openInvitation"
+            class="gold-btn">
+
+            💌 Open Invitation
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+     HERO IMAGE
+========================================== -->
+
+<section
+    class="hero-image-section">
+
+    <div class="hero-image-wrapper">
+
+        <img
+            src="images/hero.jpg"
+            alt="Hariharan and Jayalakshmi"
+            class="hero-image">
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SCROLL INDICATOR
+========================================== -->
+
+<div class="scroll-indicator">
+
+    <span>
+
+        Scroll Down
+
+    </span>
+
+    <div class="scroll-mouse">
+
+        <div class="scroll-wheel"></div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     BACKGROUND MUSIC
+========================================== -->
+
+<audio
+    id="bgMusic"
+    preload="auto"
+    loop>
 
     <source
         src="music/anbil-avan.mp3"
@@ -84,653 +407,536 @@
 
 </audio>
 
-<button id="musicToggle">
+<!-- ==========================================
+     BRIDE & GROOM SECTION STARTS BELOW
+========================================== -->
+<!-- ==========================================
+     BRIDE & GROOM
+========================================== -->
 
-    <i class="fa-solid fa-music"></i>
+<section id="couple" class="couple-section">
 
-</button>
+    <div class="section-title">
 
-<!-- ===================================================== -->
-<!-- HERO SECTION -->
-<!-- ===================================================== -->
+        <img
+            src="images/divider.png"
+            alt="Divider"
+            class="section-divider">
 
-<section id="hero">
+        <h2>The Bride & Groom</h2>
 
-    <img class="hero-bg"
-
-         src="images/floral/background.jpg"
-
-         alt="Background">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <img class="divider"
-
-             src="images/floral/divider.png"
-
-             alt="Divider">
-
-        <p class="invite-text">
-
-            Together with our beloved families
-
+        <p>
+            With the blessings of our beloved parents,
+            we joyfully invite you to celebrate the
+            beginning of our forever.
         </p>
-
-        <h2>
-
-            We Joyfully Invite You
-
-        </h2>
-
-        <h1>
-
-            Hariharan
-
-            <span>&</span>
-
-            Jayalakshmi
-
-        </h1>
-
-        <p class="date">
-
-            22 & 23 August 2026
-
-        </p>
-
-        <div class="hero-image">
-
-            <img src="images/hero.jpg"
-
-                 alt="Hari & Jayalakshmi">
-
-        </div>
-
-        <button id="openInvite">
-
-            Open Invitation
-
-            <i class="fa-solid fa-heart"></i>
-
-        </button>
 
     </div>
 
-    <img class="flower-left"
+    <div class="couple-container">
 
-         src="images/floral/flower1.png"
+        <!-- Groom -->
 
-         alt="">
+        <div class="person-card">
 
-    <img class="flower-right"
+            <div class="person-image">
 
-         src="images/floral/flower2.png"
+                <img
+                    src="images/groom.jpg"
+                    alt="Hariharan">
 
-         alt="">
+            </div>
+
+            <div class="person-content">
+
+                <span class="person-label">
+
+                    Groom
+
+                </span>
+
+                <h3>
+
+                    Hariharan
+
+                </h3>
+
+                <div class="gold-line"></div>
+
+                <p>
+
+                    Beloved Son of
+
+                </p>
+
+                <h4>
+
+                    Mr. Boopalan
+
+                </h4>
+
+                <h4>
+
+                    Mrs. Sasikala
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <!-- Bride -->
+
+        <div class="person-card">
+
+            <div class="person-image">
+
+                <img
+                    src="images/bride.jpg"
+                    alt="Jayalakshmi">
+
+            </div>
+
+            <div class="person-content">
+
+                <span class="person-label">
+
+                    Bride
+
+                </span>
+
+                <h3>
+
+                    Jayalakshmi
+
+                </h3>
+
+                <div class="gold-line"></div>
+
+                <p>
+
+                    Beloved Daughter of
+
+                </p>
+
+                <h4>
+
+                    Mr. Shanmugam
+
+                </h4>
+
+                <h4>
+
+                    Mrs. Uma
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ===================================================== -->
-<!-- INVITATION MESSAGE -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     WEDDING EVENTS
+========================================== -->
 
-<section id="message">
+<section id="events" class="events-section">
 
-    <div class="container">
+    <div class="section-title">
 
-        <img src="images/floral/divider.png"
-             class="small-divider"
-             alt="">
+        <img
+            src="images/divider.png"
+            alt="Divider"
+            class="section-divider">
 
         <h2>
 
-            A New Beginning
+            Wedding Celebrations
 
         </h2>
 
         <p>
 
-            With the blessings of our parents and the grace of the Almighty,
-
-            we joyfully invite you and your family to celebrate
-
-            the beginning of our beautiful journey together.
+            Your presence is the greatest blessing
+            as we celebrate these beautiful moments.
 
         </p>
 
     </div>
 
-</section>
-<!-- ===================================================== -->
-<!-- DISNEY FAIRYTALE SECTION -->
-<!-- ===================================================== -->
+    <div class="events-container">
 
-<section id="story">
+        <!-- Reception -->
 
-    <div class="container">
+        <div class="event-card">
 
-        <img class="small-divider"
-             src="images/floral/divider.png"
-             alt="Divider">
+            <div class="event-icon">
 
-        <h2 class="section-title">
-            Our Fairytale Begins
-        </h2>
-
-        <p class="section-subtitle">
-            Every love story is beautiful, but ours is our favorite.
-        </p>
-
-        <div class="illustration-wrapper">
-
-            <img src="images/illustration.png"
-                 alt="Disney Illustration">
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- SCRATCH INVITATION -->
-<!-- ===================================================== -->
-
-<section id="scratchSection">
-
-    <div class="container">
-
-        <img class="small-divider"
-             src="images/floral/divider.png"
-             alt="">
-
-        <h2 class="section-title">
-
-            Reveal Your Invitation
-
-        </h2>
-
-        <p class="section-subtitle">
-
-            Swipe or scratch the golden layer below.
-
-        </p>
-
-        <div id="scratchContainer">
-
-            <canvas id="scratchCanvas"></canvas>
-
-            <div id="scratchContent">
-
-                <img src="images/scratch.JPG"
-                     alt="Scratch Reveal">
-
-                <h2>
-
-                    Hariharan ❤️ Jayalakshmi
-
-                </h2>
-
-                <p>
-
-                    Together with our families,
-
-                    we warmly welcome you to celebrate
-
-                    our wedding.
-
-                </p>
+                <img
+                    src="images/reception-icon.png"
+                    alt="Reception">
 
             </div>
 
+            <h3>
+
+                Reception
+
+            </h3>
+
+            <p class="event-date">
+
+                Saturday
+
+            </p>
+
+            <p>
+
+                22 August 2026
+
+            </p>
+
+            <p>
+
+                6:30 PM onwards
+
+            </p>
+
+            <h4>
+
+                Sri Vijayalakshmi Mahal
+
+            </h4>
+
+            <p>
+
+                Kaveripakkam
+
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/11ukiW5kAjLvcZKa9"
+                target="_blank"
+                class="gold-btn small-btn">
+
+                📍 View Map
+
+            </a>
+
+        </div>
+
+        <!-- Wedding -->
+
+        <div class="event-card">
+
+            <div class="event-icon">
+
+                <img
+                    src="images/wedding-icon.png"
+                    alt="Wedding">
+
+
+            </div>
+
+            <h3>
+
+                Wedding Ceremony
+
+            </h3>
+
+            <p class="event-date">
+
+                Sunday
+
+            </p>
+
+            <p>
+
+                23 August 2026
+
+            </p>
+
+            <p>
+
+                7:00 AM – 9:00 AM
+
+            </p>
+
+            <h4>
+
+                Sri Vijayalakshmi Mahal
+
+            </h4>
+
+            <p>
+
+                Kaveripakkam
+
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/11ukiW5kAjLvcZKa9"
+                target="_blank"
+                class="gold-btn small-btn">
+
+                📍 View Map
+
+            </a>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- ===================================================== -->
-<!-- PHOTO GALLERY -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     SCRATCH CARD SECTION STARTS BELOW
+========================================== -->
+<!-- ==========================================
+     SCRATCH CARD
+========================================== -->
 
-<section id="gallery">
+<section id="scratch" class="scratch-section">
 
-    <div class="container">
+    <div class="section-title">
 
-        <img class="small-divider"
-             src="images/floral/divider.png"
-             alt="">
+        <img
+            src="images/divider.png"
+            alt="Divider"
+            class="section-divider">
 
-        <h2 class="section-title">
+        <h2>
+
+            A Special Surprise
+
+        </h2>
+
+        <p>
+
+            Scratch below to reveal a special memory
+            from our journey together.
+
+        </p>
+
+    </div>
+
+    <div class="scratch-wrapper">
+
+        <canvas id="scratchCanvas"></canvas>
+
+        <div id="scratchContent">
+
+            <img
+                src="images/scratch.JPG"
+                alt="Special Memory">
+
+            <h3>
+
+                Every Love Story is Beautiful,
+                Ours is Our Favourite ❤️
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     PHOTO GALLERY
+========================================== -->
+
+<section id="gallery" class="gallery-section">
+
+    <div class="section-title">
+
+        <img
+            src="images/divider.png"
+            alt="Divider"
+            class="section-divider">
+
+        <h2>
 
             Our Journey Together
 
         </h2>
 
-        <p class="section-subtitle">
+        <p>
 
-            A few beautiful memories before our forever begins.
+            Some beautiful memories that brought us
+            to this wonderful moment.
 
         </p>
 
-        <div class="gallery-grid">
+    </div>
 
-            <div class="gallery-item">
+    <div class="gallery-slider">
 
-                <img src="images/couple1.jpg"
-                     alt="Couple Photo 1">
+        <button
+            class="slider-btn prev"
+            id="prevSlide">
 
-            </div>
+            ❮
 
-            <div class="gallery-item">
+        </button>
 
-                <img src="images/couple2.jpg"
-                     alt="Couple Photo 2">
+        <div class="slider-window">
+
+            <div class="slider-track">
+
+                <div class="slide active">
+
+                    <img
+                        src="images/couple1.jpg"
+                        alt="Couple Photo 1">
+
+                </div>
+
+                <div class="slide">
+
+                    <img
+                        src="images/couple2.jpg"
+                        alt="Couple Photo 2">
+
+                </div>
+
+                <div class="slide">
+
+                    <img
+                        src="images/couple3.jpg"
+                        alt="Couple Photo 3">
+
+                </div>
+
+                <div class="slide">
+
+                    <img
+                        src="images/couple4.jpg"
+                        alt="Couple Photo 4">
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+        <button
+            class="slider-btn next"
+            id="nextSlide">
 
-</section>
+            ❯
 
-<!-- ===================================================== -->
-<!-- BRIDE & GROOM -->
-<!-- ===================================================== -->
-
-<section id="couple">
-
-    <div class="container">
-
-        <img class="small-divider"
-             src="images/floral/divider.png"
-             alt="">
-
-        <h2 class="section-title">
-
-            Meet The Couple
-
-        </h2>
-
-        <div class="couple-grid">
-
-            <!-- Bride -->
-
-            <div class="person-card">
-
-                <img src="images/bride.jpg"
-                     alt="Bride">
-
-                <h2>
-
-                    Jayalakshmi S
-
-                </h2>
-
-                <h4>
-
-                    Bride
-
-                </h4>
-
-                <p>
-
-                    D/o. Mr. Shanmugam
-
-                    <br>
-
-                    &
-
-                    <br>
-
-                    Mrs. Uma
-
-                </p>
-
-            </div>
-
-            <!-- Disney Illustration -->
-
-            <div class="illustration">
-
-                <img src="images/illustration.png"
-                     alt="Illustration">
-
-            </div>
-
-            <!-- Groom -->
-
-            <div class="person-card">
-
-                <img src="images/groom.jpg"
-                     alt="Groom">
-
-                <h2>
-
-                    Hariharan B
-
-                </h2>
-
-                <h4>
-
-                    Groom
-
-                </h4>
-
-                <p>
-
-                    S/o. Mr. Boopalan
-
-                    <br>
-
-                    &
-
-                    <br>
-
-                    Mrs. Sasikala
-
-                </p>
-
-            </div>
-
-        </div>
+        </button>
 
     </div>
 
-</section>
-<!-- ===================================================== -->
-<!-- RECEPTION -->
-<!-- ===================================================== -->
+    <div class="slider-dots">
 
-<section id="reception">
+        <span class="dot active"></span>
 
-    <div class="container">
+        <span class="dot"></span>
 
-        <img src="images/floral/divider.png"
-             class="small-divider"
-             alt="">
+        <span class="dot"></span>
 
-        <h2 class="section-title">
-            Reception
-        </h2>
-
-        <div class="event-card">
-
-            <h3>22nd August 2026</h3>
-
-            <h4>7:00 PM onwards</h4>
-
-            <p>
-
-                <strong>Sri Vijayalakshmi Mahal, Kaveripakkam</strong>
-
-            </p>
-
-            <p>
-
-                We warmly invite you to join us for an evening
-                filled with love, laughter and celebration.
-
-            </p>
-
-            <a class="map-btn"
-               target="_blank"
-               href="https://maps.app.goo.gl/11cp6XQpa4hRj3U2A">
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                View Location
-
-            </a>
-
-        </div>
+        <span class="dot"></span>
 
     </div>
 
 </section>
 
-<!-- ===================================================== -->
-<!-- WEDDING -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     DISNEY ILLUSTRATION
+========================================== -->
 
-<section id="wedding">
+<section id="illustration" class="illustration-section">
 
-    <div class="container">
+    <div class="illustration-card">
 
-        <img src="images/floral/divider.png"
-             class="small-divider"
-             alt="">
-
-        <h2 class="section-title">
-            Wedding Ceremony
-        </h2>
-
-        <div class="event-card">
-
-            <h3>23rd August 2026</h3>
-
-            <h4>7:30 AM – 9:00 AM</h4>
-
-            <p>
-
-                <strong>Sri Vijayalakshmi Mahal, Kaveripakkam</strong>
-
-            </p>
-
-            <p>
-
-                Your presence and blessings
-                will make our special day even more memorable.
-
-            </p>
-
-            <a class="map-btn"
-               target="_blank"
-               href="https://maps.app.goo.gl/11cp6XQpa4hRj3U2A">
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                View Location
-
-            </a>
-
-        </div>
+        <img
+            src="images/illustration.png"
+            alt="Wedding Illustration">
 
     </div>
 
 </section>
 
-<!-- ===================================================== -->
-<!-- COUNTDOWN -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     THANK YOU
+========================================== -->
 
-<section id="countdown">
+<section id="thankyou" class="thankyou-section">
 
-    <div class="container">
+    <img
+        src="images/divider.png"
+        alt="Divider"
+        class="section-divider">
 
-        <img src="images/floral/divider.png"
-             class="small-divider"
-             alt="">
+    <h2>
 
-        <h2 class="section-title">
+        Thank You
 
-            Countdown To Our Big Day
+    </h2>
 
-        </h2>
+    <p>
 
-        <div class="countdown-wrapper">
+        Thank you for being a part of our journey.
 
-            <div class="time-box">
+    </p>
 
-                <span id="days">0</span>
+    <p>
 
-                <small>Days</small>
+        Your love, blessings and presence will make
+        our wedding day truly unforgettable.
 
-            </div>
+    </p>
 
-            <div class="time-box">
+    <h3>
 
-                <span id="hours">0</span>
+        With Love,
 
-                <small>Hours</small>
+    </h3>
 
-            </div>
+    <h1>
 
-            <div class="time-box">
+        Hariharan
 
-                <span id="minutes">0</span>
+        <span>❤</span>
 
-                <small>Minutes</small>
+        Jayalakshmi
 
-            </div>
-
-            <div class="time-box">
-
-                <span id="seconds">0</span>
-
-                <small>Seconds</small>
-
-            </div>
-
-        </div>
-
-    </div>
+    </h1>
 
 </section>
 
-<!-- ===================================================== -->
-<!-- THANK YOU -->
-<!-- ===================================================== -->
-
-<section id="thankyou">
-
-    <div class="container">
-
-        <div class="thankyou-card">
-
-            <img src="images/floral/divider.png"
-                 class="small-divider"
-                 alt="">
-
-            <h2>
-
-                Thank You
-
-            </h2>
-
-            <p>
-
-                We eagerly await your gracious presence
-                as we begin the most beautiful chapter
-                of our lives together.
-
-            </p>
-
-            <h3>
-
-                Hariharan ❤️ Jayalakshmi
-
-            </h3>
-
-            <div class="heart-animation">
-
-                ❤️
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- FOOTER -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     FOOTER
+========================================== -->
 
 <footer>
 
     <p>
 
-        With Love ❤️
+        Made with ❤️ for our family and friends
 
     </p>
 
     <p>
 
-        Hariharan B & Jayalakshmi S
-
-    </p>
-
-    <p>
-
-        22–23 August 2026
+        © 2026 Hariharan & Jayalakshmi
 
     </p>
 
 </footer>
 
-<!-- ===================================================== -->
-<!-- PETALS -->
-<!-- ===================================================== -->
-
-<div class="petals">
-
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-<!-- ===================================================== -->
-<!-- JAVASCRIPT -->
-<!-- ===================================================== -->
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
 
 <script src="js/main.js"></script>
-
-<script src="js/music.js"></script>
-
-<script src="js/scratch.js"></script>
-
-<!-- ===================================================== -->
-<!-- COUNTDOWN SCRIPT -->
-<!-- ===================================================== -->
-
-<script>
-
-const weddingDate = new Date("August 23, 2026 07:30:00").getTime();
-
-setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = weddingDate - now;
-
-document.getElementById("days").innerHTML =
-Math.floor(distance/(1000*60*60*24));
-
-document.getElementById("hours").innerHTML =
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-document.getElementById("minutes").innerHTML =
-Math.floor((distance%(1000*60*60))/(1000*60));
-
-document.getElementById("seconds").innerHTML =
-Math.floor((distance%(1000*60))/1000);
-
-},1000);
-
-</script>
 
 </body>
 
